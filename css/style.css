@@ -1,0 +1,109 @@
+/*
+* Prefixed by:
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: hsl(0, 0%, 98%);
+  color: hsl(200, 15%, 8%);
+  -webkit-transition: background 0.3s, color 0.3s;
+  -o-transition: background 0.3s, color 0.3s;
+  transition: background 0.3s, color 0.3s;
+}
+
+body.dark {
+  background-color: hsl(207, 26%, 17%);
+  color: white;
+}
+
+header {
+  background-color: white;
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem 1rem;
+}
+
+body.dark header {
+  background-color: hsl(209, 23%, 22%);
+}
+
+header h1 {
+  font-size: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.countries {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.country-card {
+  background-color: white;
+  border-radius: 6px;
+  overflow: hidden;
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  -webkit-transition: background 0.3s;
+  -o-transition: background 0.3s;
+  transition: background 0.3s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body.dark .country-card {
+  background-color: #2b3844;
+}
+
+.country-card img {
+  width: 100%;
+  height: 160px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.card-content {
+  padding: 1rem;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.card-content h2 {
+  margin-bottom: 1rem;
+  font-size: 18px;
+}
+
+.card-content p {
+  font-size: 14px;
+  margin: 4px 0;
+}
+
+@media (max-width: 768px) {
+  .countries {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
